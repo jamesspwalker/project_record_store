@@ -2,6 +2,8 @@ require_relative( "../models/album.rb" )
 require_relative( "../models/artist.rb" )
 require( "pry-byebug" )
 
+Artist.delete_all()
+
 artist1 = Artist.new({
   "name" => "Bob the Builder"
   })
@@ -19,6 +21,9 @@ album1 = Album.new({
   })
 
   album1.save()
+
+
+  p Artist.all()
 
   p artist1.albums()
 

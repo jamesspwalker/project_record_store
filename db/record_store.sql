@@ -3,13 +3,13 @@ DROP TABLE artists;
 
 CREATE TABLE artists
 (
-  id SERIAL8 primary key,
-  name VARCHAR(255) not null
+  id SERIAL8 PRIMARY KEY,
+  name VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE albums
 (
-  id SERIAL8 primary key,
-  name VARCHAR(255) not null,
-  artist_id INT8 references artists(id)
+  id SERIAL8 PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  artist_id INT8 REFERENCES artists(id) ON DELETE CASCADE
 );
