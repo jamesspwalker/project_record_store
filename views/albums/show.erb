@@ -1,0 +1,9 @@
+<h3>Name: <%= @album.name.upcase %></h3>
+
+<h3>Artist: <%= @album.artist.name %></h3>
+
+<p><a href="/albums/<%= @album.id %>/edit">Edit Album</a></p>
+
+<form action="/albums/<%= @album.id %>/delete" method="post">
+  <input type="submit" name="" value="Remove album">
+</form>
