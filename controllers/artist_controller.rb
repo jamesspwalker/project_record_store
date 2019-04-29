@@ -40,3 +40,8 @@ also_reload( '../models/*' )
   end
 
 #destroy
+  post '/artists/:id/delete' do
+    artist = Artist.find( params[:id] )
+    artist.delete()
+    redirect to '/artists'
+  end
