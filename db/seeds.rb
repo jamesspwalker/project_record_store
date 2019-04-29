@@ -13,6 +13,8 @@ artist2 = Artist.new({
   "name" => "Bart Simpson"
   })
 
+  
+
   artist1.save()
   artist2.save()
 

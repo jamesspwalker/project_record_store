@@ -1,0 +1,20 @@
+<h1>Albums</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>Artist</th>
+    <th></th>
+    <th>Stock</th>
+  </tr>
+  <% for album in @albums %>
+  <tr>
+    <td><a href="/albums/<%= album.id %>"><%= album.name %></a></td>
+    <td></td>
+    <td><%= album.artist.name %></td>
+    <td>|</td>
+    <td><%= album.stock %></td>
+  </tr>
+  <% end %>
+</table>
