@@ -1,7 +1,7 @@
 <form action="/albums" method="post">
 
   <label for="name-field">Name</label>
-  <input type="text" name="name" id="name-field" placeholder="Name">
+  <input type="text" name="name" id="name-field" placeholder="Name" required>
 
   <label for="artist-field">Artist</label>
     <select name="artist_id" id="artist-field">
@@ -11,7 +11,7 @@
     </select>
 
     <label for="stock-field">Stock:</label>
-    <input type="number" name="stock" id="stock-field" placeholder="Stock">
+    <input type="number" name="stock" id="stock-field" placeholder="Stock" required>
 
     <input type="submit" value="Create new Album">
 

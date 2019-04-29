@@ -23,7 +23,28 @@ end
   end
 
 #create
+  post '/albums' do
+    @album = Album.new( params )
+    @album.save()
+    redirect to '/albums'
+  end
 
 #edit
+  get '/albums/:id/edit' do
+    @album = Album.find( params[:id] )
+    @artists = Artist.all()
+    erb( :"albums/edit")
+  end
+
 #update
+  post '/albums/:id' do
+    Album.new( params ).update()
+    redirect to '/albums'
+  end
+
 #destroy
+  post '/albums/:id/delete' do
+    album = Album.find( params[:id] )
+    album.delete()
+    redirect to '/albums'
+  end

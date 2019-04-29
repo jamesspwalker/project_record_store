@@ -1,0 +1,18 @@
+<form action="/albums/<%= @album.id %>" method="post">
+
+  <label for="name-field">Name:</label>
+  <input type="text" name="name" placeholder="Name" id="name-field" value="<%= @album.name %>" required>
+
+  <label for="artist-field">Artist:</label>
+    <select name="artist_id" id="artist-field" >
+      <% for artist in @artists %>
+      <option value="<%= artist.id %>"><%= artist.name %></option>
+      <% end %>
+    </select>
+
+  <label for="stock-field">Stock:</label>
+    <input type="number" name="stock" id="stock-field" placeholder="Stock" required>
+
+  <input type="submit" value="Edit Album">
+
+</form>

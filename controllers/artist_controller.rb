@@ -24,7 +24,7 @@ also_reload( '../models/*' )
   post '/artists' do
     @artist = Artist.new( params )
     @artist.save()
-    erb( :"artists/create")
+    redirect to '/artists'
   end
 
 #edit
