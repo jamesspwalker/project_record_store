@@ -13,13 +13,30 @@ also_reload( '../models/*' )
   get '/artists/new' do
     erb( :"artists/new" )
   end
+
 #show
   get '/artists/:id' do
     @artist = Artist.find( params[:id] )
     erb( :"artists/show" )
   end
+
 #create
-  get 
+  post '/artists' do
+    @artist = Artist.new( params )
+    @artist.save()
+    erb( :"artists/create")
+  end
+
 #edit
+  get '/artists/:id/edit' do
+    @artist = Artist.find( params[:id] )
+    erb( :"artists/edit" )
+  end
+
 #update
+  post '/artists/:id' do
+    Artist.new( params ).update()
+    redirect to '/artists'
+  end
+
 #destroy
