@@ -19,6 +19,12 @@
     <td><%= album.artist.name %></td>
     <td>|</td>
     <td><%= album.stock %></td>
+    <td><% if album.stock.to_i < 10 %>
+      <p id="low-stock">Low Stock!</p>
+      <% elsif album.stock.to_i > 9 %>
+      <p id="high-stock">High Stock</p>
+      <% end %>
+    </td>
   </tr>
   <% end %>
 </table>

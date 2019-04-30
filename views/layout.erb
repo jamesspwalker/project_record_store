@@ -1,21 +1,16 @@
 <html>
 <head>
   <title>'Bad Record' Records</title>
-  <link href="https://fonts.googleapis.com/css?family=Merriweather|Special+Elite" rel="stylesheet">
 
-  <link rel="icon" href="/images/hazard.png" />
+  <link rel="stylesheet" href="/style.css">
 
-  <link rel="stylesheet" type="text/css" href="/styles/buttons.css">
-  <link rel="stylesheet" type="text/css" href="/styles/forms.css">
-  <link rel="stylesheet" type="text/css" href="/styles/structure.css">
-  <link rel="stylesheet" type="text/css" href="/styles/tables.css">
 </head>
 <body>
-  <main class="flex flex--row">
-    <nav>
+  <main>
+    <nav id="navigation">
       <ul>
         <li>
-          <a href="/">Home</a>  
+          <a href="/">Home</a>
         </li>
         <li>
           <a href="/albums">Albums</a>
@@ -23,8 +18,12 @@
         <li>
           <a href="/artists">Artists</a>
         </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Special Album</a>
+        </li>
       </ul>
     </nav>
+  
     <section id="content">
       <%= yield %>
     </section>
