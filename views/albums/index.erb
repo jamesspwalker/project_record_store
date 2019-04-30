@@ -11,6 +11,8 @@
     <th>Artist</th>
     <th></th>
     <th>Stock</th>
+    <th></th>
+    <th>Rating</th>
   </tr>
   <% for album in @albums %>
   <tr>
@@ -25,6 +27,8 @@
       <p id="high-stock">High Stock</p>
       <% end %>
     </td>
+    <td></td>
+    <td><%= album.rating %></td>
   </tr>
   <% end %>
 </table>

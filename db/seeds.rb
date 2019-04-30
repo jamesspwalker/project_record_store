@@ -13,7 +13,7 @@ artist2 = Artist.new({
   "name" => "Bart Simpson"
   })
 
-  
+
 
   artist1.save()
   artist2.save()
@@ -21,13 +21,15 @@ artist2 = Artist.new({
 album1 = Album.new({
   "name" => "Can we fix it",
   "artist_id" => artist1.id,
-  "stock" => 8
+  "stock" => 8,
+  "rating" => 4
   })
 
 album2 = Album.new({
   "name" => "Do the Bartman",
   "artist_id" => artist2.id,
-  "stock" => 12
+  "stock" => 12,
+  "rating" => 3
   })
 
   album1.save()

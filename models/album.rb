@@ -9,14 +9,14 @@ class Album
     @name = options['name']
     @artist_id = options['artist_id'].to_i
     @stock = options['stock']
-    @rating = options['rating']
+    @rating = options['rating'].to_i
   end
 
   def save()
-    sql = "INSERT into albums(name, artist_id, stock)
-    VALUES($1, $2, $3)
+    sql = "INSERT into albums(name, artist_id, stock, rating)
+    VALUES($1, $2, $3, $4)
     RETURNING id"
-    values = [@name, @artist_id, @stock]
+    values = [@name, @artist_id, @stock, @rating]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -32,10 +32,10 @@ class Album
 
   def update()
     sql = "UPDATE albums SET
-    (name, artist_id, stock)
-    = ($1, $2, $3)
-    WHERE id = $4"
-    values = [@name, @artist_id, @stock, @id]
+    (name, artist_id, stock, rating)
+    = ($1, $2, $3, $4)
+    WHERE id = $5"
+    values = [@name, @artist_id, @stock, @rating, @id]
     SqlRunner.run(sql, values)
   end
 
