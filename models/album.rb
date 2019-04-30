@@ -2,13 +2,14 @@ require_relative('../db/sql_runner')
 
 class Album
 
-  attr_reader( :id, :name, :artist_id, :stock )
+  attr_reader( :id, :name, :artist_id, :stock, :rating)
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @artist_id = options['artist_id'].to_i
     @stock = options['stock']
+    @rating = options['rating']
   end
 
   def save()

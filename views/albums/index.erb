@@ -16,7 +16,7 @@
   <tr>
     <td><a href="/albums/<%= album.id %>"><%= album.name %></a></td>
     <td></td>
-    <td><%= album.artist.name %></td>
+    <td><a href="/artists/<%= album.artist.id %>"><%= album.artist.name %></a></td>
     <td>|</td>
     <td><%= album.stock %></td>
     <td><% if album.stock.to_i < 10 %>

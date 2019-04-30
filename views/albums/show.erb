@@ -1,6 +1,15 @@
 <h3>Name: <%= @album.name.upcase %></h3>
 
-<h3>Artist: <%= @album.artist.name %></h3>
+<h3>Artist: <a href="/artists/<%= @album.artist.id %>"><%= @album.artist.name %></a></h3>
+
+<h3>Stock: <%= @album.stock %></h3>
+
+<td><% if @album.stock.to_i < 10 %>
+  <p id="low-stock">Low Stock!</p>
+  <% elsif @album.stock.to_i > 9 %>
+  <p id="high-stock">High Stock</p>
+  <% end %>
+</td>
 
 <p><a href="/albums/<%= @album.id %>/edit">Edit Album</a></p>
 
