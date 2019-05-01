@@ -47,7 +47,7 @@ h1 {
 }
 
 .rating {
-    
+  float: left;
     height: 46px;
     padding: 0 10px;
 }
@@ -82,19 +82,13 @@ h1 {
     color: green;
 }
 
-.homepage{
-    background-image: url('/images/crazy-frog.gif');
-
-    background-size: cover;
-
-    height: 100vh;
-    padding:0;
-    margin:0;
-
+/* .homepage{
+  padding: 100px;
+  text-align: center;
    color: white;
-}
+} */
 
-body {
+/* body {
   background-image: url('/images/album-black-classic-167092.jpg');
   background-image: linear-gradient(90deg);
   background-size: cover;
@@ -108,10 +102,10 @@ h1 {text-align: center;}
 
 .album-data {
 
-  margin-left: 28vh;
-  margin-top: 10vh;
-  align-content:center;
+  margin-top: 20vh;
+  text-align: center;
   color: white;
+
 }
 
 .new-album{
@@ -133,4 +127,10 @@ color: red;
   margin-top: 10vh;
   align-content:center;
   color: white;
+} */
+
+iframe{float: right;}
+
+#new-album {
+  text-align: center;
 }
